@@ -15,6 +15,15 @@ body {
 .width-100 {
     width: 200px;
 }
+.width-180 {
+    width: 180px;
+}
+.width-250 {
+    width: 250px;
+}
+.width-125 {
+    width: 125px;
+}
 .fl-right {
     float: right;
 }
@@ -265,38 +274,127 @@ body {
 
 /* Footer */
 #footer {
-    margin-top: 60px;
-    /* height: 200px; */
+    margin: 60px auto auto;
+    padding-top: 30px;
+    color: #d1d1d1;
     background-color: #474747;
+    
 }
 
-#footer::after {
+#footer .footer-top {
+    height: 150px;
+    width: 860px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .footer-top p {
+    width: 200px;
+    font-size: 12px;
+}
+
+#footer h4, #footer h3 {
+    text-transform:uppercase;
+    margin-bottom: 20px;
+}
+
+#footer h4 {
+    font-size: 14px;
+}
+
+#footer .footer--info li {
+    list-style-type: none;
+}
+
+#footer .footer--info li a{
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #d1d1d1;
+    transition: ease 0.5s;
+}
+
+#footer .footer--info li a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+#footer .footer--info .flex {
+    display: flex;
+    width: 100%;
+}
+
+.foot-email {
+    position: relative;
+    margin-top: 10px;
+}
+
+.foot-email-box input::placeholder {
+    font-size: 12px;
+    color: #dadada;
+    line-height: 16px;
+}
+.foot-email-box .form-control {
+    padding: 5px;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, .4);
+    background-color: #848383;
+}
+.foot-email-sub .arrow-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .foot-email-sub .arrow-right {
+    color: #dadada;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+#footer .footer-bot {
+    width: 860px;
+    margin: auto;
+}
+
+#footer .footer-bot::after {
     content: "";
     display: block;
     clear: both;
 }
 
-#footer .footer-top {
-    height: 150px;
-}
-
 #footer .footer-bot {
     border-top: #848383 solid 1px;
-    padding: 20px 0px;
+    /* padding: 20px 0px; */
 
 }
 
 #footer .footer-bot .copyright {
-    color: #fff;
-
+    padding: 10px 0px;
+    font-size: 14px;
 }
 
 #footer .footer-bot .social {
-    
+    padding: 10px 0px;
+    float: right;
 }
 
 #footer .footer-bot a {
     text-decoration: none;
-    color: #fff;
-    padding: 0px 10px;
+    font-size: 14px;
+    color: #dadada;
+    padding-left: 10px;
 }
