@@ -5,10 +5,10 @@
 }
 
 html {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
     height: 1500px;
 }
 
@@ -40,7 +40,6 @@ body {
     z-index: 1;
     height: 46px;
     width: 100%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: absolute;
     text-align: center;
 }
@@ -106,7 +105,6 @@ body {
     position: absolute;
     top: 50%;
     width: 800px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #fff;
     text-align: center;
 }
@@ -141,7 +139,6 @@ body {
 
 /* Search */
 #content #search {
-    font-family: sans-serif;
     max-width: 900px;
     margin: 30px auto;
     padding: 40px 20px;
@@ -203,74 +200,71 @@ body {
     color: #fff;
 }
 
-/* Buy car */
-.places-list {
-    /* display: flex; */
-    margin: 100px 240px 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
+/* Featured Cars */
+.featured-cars{
+    padding:112px 0 120px;
+    color: rgba( 0, 0, 0, 0.7);
+}
+.featured-cars-content{
+    padding-top:96px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.places-list::after {
-    display: block;
+.featured-cars-content::after {
     content: "";
+    display: block;
     clear: both;
 }
 
-.places-list .description {
-    width: 33.33333%;
+.featured-cars-single {
     float: left;
-    padding: 0px 12px;
-    margin-top: 32px;
+    width: 33.3333%;
+    padding: 0px 8px;
 }
 
-.places-list .description:hover {
-    /* opacity: 0.8; */
-    cursor: pointer;
-    transform: scale(1.01);
+.featured-img-box {
+    border: 1px solid #dadfe9;
 }
 
-.places-list .image-car {
-    width: 100%;
-    display: block;
+.featured-cars-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    height: 220px;
+    border-bottom: 1px solid #dadfe9;
 }
 
-.places-list .content-car {
-    padding: 16px;
-    background-color: #383838;
+.featured-cars-info{
+    padding:14px 10px;
 }
 
-.places-list .name-car {
-    width: 60%;
-    color: #fff;
-    font-size: 24px;
-    display: inline-block;
-    margin-bottom: 20px;
+.featured-cars-info p {
+    font-size: 14px;
 }
 
-.places-list .cost-car {
-    float: right;
-    display: block;
-    padding: 12px 12px;
-    color: #fff;
-    background-color: #3C6DC1;
-    border: 0px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+.featured-cars-info span {
+    margin-right: 8px;
 }
 
-.places-list a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 1px;
-    display: inline-block;
+.featured-cars-text {
+    margin: 12px 0px 40px
 }
 
-.places-list a:hover {
-    opacity: 0.6;
+.featured-cars-text h3,
+.featured-cars-text h5 {
+    color: #444A57;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
+.featured-cars-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.5;
+}
 
 /* Footer */
 #footer {
@@ -281,16 +275,22 @@ body {
     
 }
 
+#footer .container {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #footer .footer-top {
     height: 150px;
-    width: 860px;
-    margin: 50px auto;
+    width: 100%;
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
 }
 
 #footer .footer-top p {
-    width: 200px;
+    /* width: 200px; */
     font-size: 12px;
 }
 
@@ -359,15 +359,10 @@ body {
     font-weight: bold;
 }
 
-
-
-
-
-
-
+/* Footer Bot */
 #footer .footer-bot {
-    width: 860px;
-    margin: auto;
+    margin-top: 50px;
+    width: 100%;
 }
 
 #footer .footer-bot::after {
@@ -387,14 +382,28 @@ body {
     font-size: 14px;
 }
 
+#footer .copyright p {
+    display: inline-block;
+}
+
 #footer .footer-bot .social {
     padding: 10px 0px;
     float: right;
 }
 
-#footer .footer-bot a {
+#footer .social a {
     text-decoration: none;
     font-size: 14px;
     color: #dadada;
+    padding-left: 10px;
+    transition: ease 0.3s;
+}
+
+#footer .social a:hover {
+    font-size: 16px;
+    color: #fff;
+}
+
+#footer .social i {
     padding-left: 10px;
 }
