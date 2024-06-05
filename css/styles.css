@@ -1,17 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    height: 1500px;
+    /* height: 1500px; */
 }
 
+
+/* ------------------------------ */
+/* Common */
 .width-100 {
     width: 200px;
 }
@@ -35,17 +40,27 @@ body {
     float: left;
 }
 
+/* ------------------------------ */
+/* ============================== */
+#main {
+    position: relative;
+}
+
+/* ------------------------------ */
 /* Header */
 #header {
-    z-index: 1;
-    height: 46px;
+    font-family: 'Roboto', sans-serif;
+    z-index: 3;
+    height: 50px;
     width: 100%;
-    position: absolute;
+    position: fixed;
     text-align: center;
+    background-color: #000;
+    box-shadow: 0px 0px 5px 5px rgba( 0, 0, 0, 0.4);
 }
 
 #header .nav {
-    height: 46px;
+    height: 50px;
     padding: 0;
     /* border-bottom: #858585 solid 1px; */
     display: inline-block;
@@ -66,7 +81,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     /* line-height: 34px; */
-    padding-top: 12px;
+    padding-top: 16px;
     margin: 0px 10px;
     color: #858585;
     display: block;
@@ -91,17 +106,31 @@ body {
 }
 
 
+/* ------------------------------ */
 /* Slider */
 #slider {
     padding-top: 56.25%;
-    background: url(../images/background-header.jpg) top no-repeat;
-    background-size: contain;
+    background: url(../images/back-ground/1145991.jpg) top no-repeat;
+    background-size: cover;
+    /* opacity: 0.9; */
     position: relative;
     display: flex;
     justify-content: center;
 }
 
+#slider::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 35%);
+}
+
 #slider .text-content {
+    font-family: 'Roboto', sans-serif;
+    z-index: 2;
     position: absolute;
     top: 50%;
     width: 800px;
@@ -110,6 +139,7 @@ body {
 }
 
 #slider .text-heading {
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
@@ -118,25 +148,32 @@ body {
 }
 
 #slider .btn {
-    padding: 14px 30px;
+    padding: 14px 0px;
     background-color: rgba( 0, 0, 0, 0);
-    color: #fff;
     border:#fff solid 1px;
     border-radius: 4px;
 }
 
 #slider .btn:hover {
-    background-color: #858585;
+    background-color: #324eca;
     cursor: pointer;
     border-color: rgba(0, 0, 0, 0);
 }
 
+#slider .btn a {
+    color: #fff;
+    padding: 14px 30px;
+    text-decoration: none;
+}
+
+/* ------------------------------ */
 /* Content */
 #content {
     /* display: flex; */
     justify-content: center;
 }
 
+/* ------------------------------ */
 /* Search */
 #content #search {
     max-width: 900px;
@@ -199,7 +236,7 @@ body {
     background-color: #3030ae;
     color: #fff;
 }
-
+/* ------------------------------ */
 /* Service */
 #service {
     padding: 112px 0 120px;
@@ -261,24 +298,6 @@ body {
     color: #fff;
 }
 
-#service .service-box:hover .service-box-content::after {
-    background-color: #fff;
-}
-
-#service .service-img {
-    text-align: center;
-}
-
-#service .service-img img {
-    width: 80px;
-    display: inline-block;
-}
-
-#service .service-box-content {
-    padding: 10px 10px 35px;
-    position: relative;
-}
-
 #service .service-box-content::after {
     content: "";
     width: 20px;
@@ -290,37 +309,64 @@ body {
     background-color: #3030ae;
 }
 
+#service .service-box:hover .service-box-content::after {
+    background-color: #fff;
+}
+
+#service .service-icon {
+    text-align: center;
+}
+
+.service-icon [class^="flaticon-"]:before, .service-icon [class*=" flaticon-"]:before,
+.service-icon [class^="flaticon-"]:after, .service-icon [class*=" flaticon-"]:after {
+    font-size: 60px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#service .service-box:hover .service-icon [class^="flaticon-"]:before,#service .service-box:hover .service-icon [class*=" flaticon-"]:before,
+#service .service-box:hover .service-icon [class^="flaticon-"]:after,#service .service-box:hover .service-icon [class*=" flaticon-"]:after {
+    color: #fff;
+}
+
+#service .service-box-content {
+    padding: 10px 10px 35px;
+    position: relative;
+    text-align: center;
+}
+
+
 #service .service-box-content h3 {
     margin-bottom: 20px;
     margin-top: 50px;
     font-weight: 500;
 }
 
+/* ------------------------------ */
 /* Featured Cars */
-featured-cars{
+#featured-cars{
     padding:112px 0 120px;
     color: rgba( 0, 0, 0, 0.7);
 }
 
-featured-cars .container {
+#featured-cars .container {
     width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 
-featured-cars .section-header {
+#featured-cars .section-header {
     text-align: center;
 
 }
 
-featured-cars .section-header h2 {
+#featured-cars .section-header h2 {
     font-size: 36px;
     padding-bottom: 20px;
     position: relative;
     font-weight: 500;
 }
 
-featured-cars .section-header h2::after {
+#featured-cars .section-header h2::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -389,13 +435,11 @@ featured-cars .section-header h2::after {
     letter-spacing: 0.5;
 }
 
-
+/* ------------------------------ */
 /* Footer */
 #footer {
-    padding-top: 30px;
     color: #d1d1d1;
     background-color: #474747;
-    
 }
 
 #footer .container {
@@ -410,11 +454,13 @@ featured-cars .section-header h2::after {
 
 /* Footer Top */
 #footer .footer-top {
-    height: 150px;
     width: 100%;
-    margin-top: 50px;
     display: flex;
     justify-content: space-between;
+}
+
+#footer .footer--info {
+
 }
 
 #footer .footer-top p {
@@ -534,4 +580,54 @@ featured-cars .section-header h2::after {
 
 #footer .social i {
     padding-left: 10px;
+}
+
+
+/* Back to Top */
+#back-top {
+    position: fixed;
+    bottom: 60px;
+    right: 90px;
+    width: 40px;
+    height: 40px;
+    color: #444A57;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px 1px rgba( 0, 0, 0, 0.4);
+    animation-name: backtop;
+    animation-duration: 0.8s;
+}
+
+@keyframes backtop {
+    0% {
+        bottom: 20px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 60px;
+        opacity: 1;
+    }
+}
+
+#back-top i {
+    font-size: 25px;
+    position: relative;
+    animation-name: up-down;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+@keyframes up-down {
+    
+    0% {
+        bottom: -12px;
+    }
+    100% {
+        bottom: 0px;
+    }
 }
