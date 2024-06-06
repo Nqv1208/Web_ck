@@ -16,6 +16,7 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: none ;
 }
 
 
@@ -240,6 +241,7 @@ body {
     padding: 24px 16px 40px;
     color: #fff;
     background-color: #454545;
+    height: 280px;
 }
 
 
@@ -286,23 +288,32 @@ body {
     display: block;
 }
 
-#send-require .form-send-require input {
+#send-require .form-info input {
     width: 100%;
     padding: 10px 10px;
     font-size: 20px;
 }
 
-#send-require .form-send-require textarea {
+#send-require .form-info textarea {
     display: block;
     width: 100%;
     min-height: 100px;
     padding: 10px;
+    font-size: 20px;
 }
 
-#send-require .form-send-require .send-require-label {
+#send-require .form-info .send-require-label {
     display: block;
     padding-top: 24px;
     padding-bottom: 8px;
+}
+
+#send-require .form-confirm {
+    padding-top: 40px;
+}
+
+#send-require .form-confirm p {
+    margin-bottom: 16px ;
 }
 
 
