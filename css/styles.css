@@ -524,14 +524,12 @@ ul li a {color: #000;}
 }
 
 #footer .footer-bot {border-top: #848383 solid 1px;}
-
 #footer .footer-bot .copyright {
     padding: 10px 0px;
     font-size: 14px;
 }
 
 #footer .copyright p {display: inline-block;}
-
 #footer .footer-bot .social {
     padding: 10px 0px;
     float: right;
