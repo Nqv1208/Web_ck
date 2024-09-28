@@ -552,7 +552,6 @@ ul li a {color: #000;}
 
 #footer .social i {padding-left: 10px;}
 
-
 /* Back to Top */
 #back-top {
     position: fixed;
@@ -592,7 +591,6 @@ ul li a {color: #000;}
 }
 
 @keyframes up-down {
-    
     0% {
         bottom: -12px;
     }
